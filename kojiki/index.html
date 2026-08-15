@@ -3,91 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ラノベ古事記風・日本神話 | 神代から推古まで</title>
-  <meta name="description" content="古事記をベースにした完全オリジナルの現代ラノベ風再話。神社検定対策にも、娯楽としても読める。">
+  <title>ラノベ古事記風・日本神話 | 第何話を読みますか？</title>
+  <meta name="description" content="古事記をベースにした完全オリジナルの現代ラノベ風再話。どの話から読みますか？">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div id="app">
-    <!-- サイドバー / 目次 -->
-    <aside id="sidebar" class="sidebar">
-      <div class="sidebar-header">
-        <h1 class="site-title">ラノベ古事記風</h1>
-        <p class="site-subtitle">日本神話・完全再話</p>
-        <button id="close-sidebar" class="icon-btn" aria-label="目次を閉じる">×</button>
-      </div>
-      <nav id="toc" class="toc">
-        <!-- JSで生成 -->
-      </nav>
-      <div class="sidebar-footer">
-        <p class="copyright-note">
-          原典：古事記（太安万侶 撰・712年）<br>
-          本作品はパブリックドメインの神話を元にした<br>
-          完全オリジナルの現代ラノベ風再話です。
-        </p>
-      </div>
-    </aside>
+<body class="top-page">
+  <div class="top-container">
+    <header class="top-header">
+      <h1 class="top-title">ラノベ古事記風</h1>
+      <p class="top-lead">日本神話・完全再話</p>
+      <p class="top-question">第何話を読みますか？</p>
+    </header>
 
-    <!-- オーバーレイ -->
-    <div id="overlay" class="overlay"></div>
-
-    <!-- メインビューア -->
-    <main id="viewer" class="viewer">
-      <header class="viewer-header">
-        <button id="open-sidebar" class="icon-btn" aria-label="目次を開く">☰</button>
-        <div class="header-info">
-          <span id="current-volume" class="volume-label"></span>
-          <span id="current-title" class="episode-title-header"></span>
-        </div>
-        <div class="header-actions">
-          <button id="settings-btn" class="icon-btn" aria-label="表示設定">ぁあ</button>
-        </div>
-      </header>
-
-      <article id="episode-content" class="episode-content">
-        <!-- エピソード本文がここに入る -->
-        <div class="loading">読み込み中…</div>
-      </article>
-
-      <footer class="viewer-footer">
-        <button id="prev-ep" class="nav-btn" disabled>← 前の話</button>
-        <div class="progress-info">
-          <span id="ep-position"></span>
-        </div>
-        <button id="next-ep" class="nav-btn">次の話 →</button>
-      </footer>
-    </main>
-
-    <!-- 設定パネル -->
-    <div id="settings-panel" class="settings-panel hidden">
-      <div class="settings-inner">
-        <h3>表示設定</h3>
-        <div class="setting-group">
-          <label>文字サイズ</label>
-          <div class="size-btns">
-            <button data-size="small">小</button>
-            <button data-size="medium" class="active">中</button>
-            <button data-size="large">大</button>
-            <button data-size="xlarge">特大</button>
-          </div>
-        </div>
-        <div class="setting-group">
-          <label>背景</label>
-          <div class="bg-btns">
-            <button data-bg="light" class="active">ライト</button>
-            <button data-bg="sepia">セピア</button>
-            <button data-bg="dark">ダーク</button>
-          </div>
-        </div>
-        <button id="close-settings" class="close-settings-btn">閉じる</button>
-      </div>
+    <div id="continue-banner" class="continue-banner hidden">
+      <p>前回の続きから読めます</p>
+      <a id="continue-link" href="#" class="continue-btn">続きを読む →</a>
+      <button id="dismiss-continue" class="dismiss-btn" type="button">一覧から選ぶ</button>
     </div>
+
+    <section class="episode-list">
+      <h2 class="volume-heading">上巻・神代</h2>
+      <ul class="ep-list">
+        <li><a href="episodes/01.html"><span class="ep-num">01</span><span class="ep-title">プロローグ　まだ何もなかった頃</span></a></li>
+        <li><a href="episodes/02.html"><span class="ep-num">02</span><span class="ep-title">国生み　「お前から先に言えよ」事件</span></a></li>
+        <li><a href="episodes/03.html"><span class="ep-num">03</span><span class="ep-title">黄泉へ　取り返しのつかない別れ</span></a></li>
+        <li><a href="episodes/04.html"><span class="ep-num">04</span><span class="ep-title">天岩戸　世界が真っ暗になった日</span></a></li>
+        <li><a href="episodes/05.html"><span class="ep-num">05</span><span class="ep-title">八岐大蛇　出雲の英雄譚</span></a></li>
+        <li><a href="episodes/06.html"><span class="ep-num">06</span><span class="ep-title">大国主　国作りと試練の連続</span></a></li>
+        <li><a href="episodes/07.html"><span class="ep-num">07</span><span class="ep-title">国譲り　天孫へ続く道</span></a></li>
+        <li><a href="episodes/08.html"><span class="ep-num">08</span><span class="ep-title">海幸山幸　兄と弟の物語</span></a></li>
+      </ul>
+
+      <h2 class="volume-heading">中巻・天皇記</h2>
+      <ul class="ep-list">
+        <li><a href="episodes/09.html"><span class="ep-num">09</span><span class="ep-title">神武東征　大和を目指して</span></a></li>
+        <li><a href="episodes/10.html"><span class="ep-num">10</span><span class="ep-title">倭建命　悲劇の英雄</span></a></li>
+        <li><a href="episodes/11.html"><span class="ep-num">11</span><span class="ep-title">神功皇后　海を越えた遠征</span></a></li>
+      </ul>
+
+      <h2 class="volume-heading">下巻・天皇記</h2>
+      <ul class="ep-list">
+        <li><a href="episodes/12.html"><span class="ep-num">12</span><span class="ep-title">仁徳天皇　聖帝と后の嫉妬</span></a></li>
+        <li><a href="episodes/13.html"><span class="ep-num">13</span><span class="ep-title">雄略天皇　大悪天皇と呼ばれた君</span></a></li>
+      </ul>
+
+      <h2 class="volume-heading">終章</h2>
+      <ul class="ep-list">
+        <li><a href="episodes/14.html"><span class="ep-num">14</span><span class="ep-title">終章　古事記が語りたかったこと</span></a></li>
+      </ul>
+    </section>
+
+    <footer class="top-footer">
+      <p class="copyright-note">
+        原典：古事記（太安万侶 撰・712年）<br>
+        本作品はパブリックドメインの神話を元にした完全オリジナルの現代ラノベ風再話です。<br>
+        特定の現代語訳サイトや書籍の文章を複製したものではありません。
+      </p>
+    </footer>
   </div>
 
-  <script src="data/episodes.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/top.js"></script>
 </body>
 </html>
