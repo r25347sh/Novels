@@ -1,6 +1,5 @@
 /**
- * トップページ用
- * 前回の続きバナー表示
+ * トップページ用 — 前回の続きバナー
  */
 (function () {
   "use strict";
@@ -21,7 +20,9 @@
     "11": "episodes/11.html",
     "12": "episodes/12.html",
     "13": "episodes/13.html",
-    "14": "episodes/14.html"
+    "14": "episodes/14.html",
+    "15": "episodes/15.html",
+    "16": "episodes/16.html"
   };
 
   function loadProgress() {
